@@ -1,0 +1,5 @@
+[
+  {"id": 1, "ubicacion": "VIP", "vendido": false},
+  {"id": 2, "ubicacion": "General", "vendido": false},
+  {"id": 3, "ubicacion": "Preferencial", "vendido": false}
+]
