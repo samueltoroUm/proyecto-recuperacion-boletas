@@ -1,0 +1,105 @@
+
+# Proyecto Estadio - Venta de Boletas 🎟️
+
+Este es un sistema en Python + Flask para gestionar la venta de boletas en un estadio durante dos días de concierto. Guarda usuarios, asientos y ventas en archivos `.json`.
+
+---
+
+## 🚀 Cómo ejecutar el sistema
+
+1. Instala las dependencias:
+```bash
+pip install flask
+```
+
+2. Asegúrate de tener los archivos:
+- `app.py`
+- `asientos.json`
+- `usuarios.json`
+- `ventas.json`
+
+3. Ejecuta el servidor:
+```bash
+python app.py
+```
+
+---
+
+## 🔗 URL base
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+## 📬 Endpoints disponibles (para usar en Postman)
+
+### 1. Ver mensaje de inicio
+- **GET** `/`
+
+---
+
+### 2. Ver todos los asientos
+- **GET** `/asientos`
+
+---
+
+### 3. Ver asientos disponibles
+- **GET** `/asientos/disponibles`
+
+---
+
+### 4. Ver asientos vendidos
+- **GET** `/asientos/vendidos`
+
+---
+
+### 5. Registrar nuevo usuario
+- **POST** `/usuarios`
+- **Body JSON:**
+```json
+{
+  "cedula": "12345678",
+  "nombre": "Juan",
+  "apellido": "Pérez"
+}
+```
+
+---
+
+### 6. Consultar usuario por cédula
+- **GET** `/usuarios/12345678`
+
+---
+
+### 7. Vender un asiento
+- **POST** `/vender`
+- **Body JSON:**
+```json
+{
+  "asiento_id": 2,
+  "funcion_id": 2,
+  "cedula": "12345678"
+}
+```
+> Puedes omitir `"cedula"` si el usuario no desea registrarse.
+
+---
+
+### 8. Ver historial de ventas
+- **GET** `/ventas`
+
+---
+
+## 💾 Archivos que guardan la información
+
+- `asientos.json` → todos los asientos y su estado
+- `usuarios.json` → usuarios registrados
+- `ventas.json` → historial completo de ventas
+
+---
+
+## ✨ Autor
+
+Samuel Toro - Proyecto académico
